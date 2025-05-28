@@ -1,0 +1,144 @@
+/* Estilos base */
+:root {
+    --primary-color: #4361ee;
+    --success-color: #4cc9f0;
+    --error-color: #f72585;
+    --warning-color: #ff9e00;
+    --text-color: #2b2d42;
+    --light-text: #6c757d;
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --border-color: #e0e0e0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedores */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Tipografía */
+h1, h2, h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+/* Tarjetas */
+.card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Formularios */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #3a56d4;
+}
+
+/* Mensajes */
+.alert {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.alert-success {
+    background-color: rgba(76, 201, 240, 0.1);
+    color: var(--success-color);
+    border-left: 4px solid var(--success-color);
+}
+
+.alert-error {
+    background-color: rgba(247, 37, 133, 0.1);
+    color: var(--error-color);
+    border-left: 4px solid var(--error-color);
+}
+
+/* Lista de archivos */
+.file-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.file-item {
+    background: var(--card-bg);
+    padding: 1.25rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.file-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Estado de sincronización */
+.synced {
+    color: var(--success-color);
+    font-weight: 500;
+}
+
+.not-synced {
+    color: var(--warning-color);
+    font-weight: 500;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .file-list {
+        grid-template-columns: 1fr;
+    }
+}
